@@ -1,7 +1,3 @@
-% !TEX program = xelatex
-% This is my resume
-% by ice1000
-
 \documentclass{resume}
 
 \usepackage{lastpage}
@@ -14,158 +10,141 @@
 \renewcommand\headrulewidth{0pt}
 \cfoot{\thepage\ of \pageref{LastPage}}
 
-\name{Tesla Ice Zhang}
+\name{Taine Zhao}
 
 \basicInfo{
-  \email{ice1000kotlin@foxmail.com} \textperiodcentered\
-  \phone{(+86) 180-8192-5082} \textperiodcentered\
-  \github[ice1000]{https://github.com/ice1000}
-  % \linkedin[billryan8]{https://www.linkedin.com/in/billryan8}
+  \email{twshere@outlook.com} \textperiodcentered\
+  \phone{(+86) 176-0064-7398} \textperiodcentered\
+  \github[thautwarm]{https://github.com/thautwarm}
 }
 
 \section{\faGraduationCap\ Education}
-\datedsubsection{\textbf{The Pennsylvania State University (PSU)}, PA, US}{08/18 -- Current}
-  Major: Computer Science, Anticipated Graduation: 06/22
+\datedsubsection{\textbf{Nanjing University of Science and Technology}, Jiangsu, China}{09/15 -- Current}
+  Major: Mathematics and Applied Mathematics
 
 \section{\faUsers\ Work Experience}
-\datedsubsection{\textbf{Sourcebrella Inc.}, Shenzhen, China}{02/18 -- 07/18}
-\role{Intern}{Compiler Front-End, IDE Plugin Development}
+\datedsubsection{\textbf{Microsoft Research Asia}, Beijing, China}{11/17 -- 02/19}
+\role{Intern}{Compiler Design, Distributed System, Machine Learning Framework}
 \begin{itemize}
-  \item Created IntelliJ/CLion/Eclipse plugin of the Pinpoint analyzer, helped to create SonarQube plugin
-  \item Created a multi-threading cross Java/Kotlin source code indexer, index Hadoop takes 4 minutes
-  \item Learned a lot about Linux programming and clang/llvm
-\end{itemize}
-
-\datedsubsection{\textbf{PingCAP}, Remote}{08/18 -- Current}
-\role{Intern}{TiKV Team}
-\begin{itemize}
-  \item Improved many libraries used by TiKV, like
-    optimized the memory performance of
-    \href{https://docs.rs/crate/grpcio} {grpcio},
-    added new features to
-    \href{https://docs.rs/crate/procinfo} {procinfo}
+  \item Created an implementation of dynamically loading and updating distributed data schema for Microsoft GraphEngine
+  \item Created prototypes for MSRA internal projects about future machine learning frameworks, including gluing Python with MySQL in runtime level, and an extended SQL
+  \item Created a LLVM IR builder framework in .NET side, which is introduced into a future/extended version of GraphEngine to achieve JIT support
+  \item Finished a part of lowering tasks for the first/basic language in the platform of that future/extended version of GraphEngine
 \end{itemize}
 
 \section{\faGithubAlt\ Personal Projects}
-% \datedsubsection{\textbf{FriceEngine}}{\url{https://icela.github.io/}}
-% % \role{Kotlin, C\#, Racket, Ruby}{Founder and main contributer to the Kotlin/C\#/Ruby version}
-% A multilingual, natively-written, easy-to-use game engine series.
-% \begin{itemize}
-%   \item Based on life cycle / utility APIs, based on each languages' built-in GUI framework,
-%     easy to install.
-%   \item GitHub issues / milestones are used as task / version managing tools, nice changelogs.
-%   \item A JavaFX-based drag-and-drop GUI designer, generates multilingual codes for each language.
-% \end{itemize}
-\datedsubsection{\textbf{DevKt}}{\url{https://github.com/ice1000/dev-kt}}
-Cross-platform lightweight code editor / Kotlin IDE.
+
+\datedsubsection{\textbf{YAPyPy}}{\url{https://github.com/Xython/YAPyPy}}
+Yet Another Python Python / Pure Python Compiler
 \begin{itemize}
-  \item Built-in Java/Kotlin highlights and completion, other languages can be supported
-    via plugins (transplantable from JetBrains IDE's).
-    Has extra build \& run support for Kotlin.
-  \item Flexible architecture, decoupled high-level logic with UI, migration to other UI frameworks is easy.
-  \item Provides fine-grained highlight color and keymap settings, support hot reload.
+  \item A pure Python compiler built on CPython, which provides full compatibility for multiple versions of CPython 3.x
+      , currently support 3.6.x and 3.7.x
+  \item Provided some syntax extensions like dictionary destructuring and pattern matching
+  \item Capable of customizing parser and bytecode emitter
+      , which enables making arbitrary syntactic/semantic extensions with CPython its own
 \end{itemize}
 
-\datedsubsection{\textbf{Lice language}}{\url{https://github.com/lice-lang/lice}}
-% \role{Kotlin, Java}{Founder and main contributer}
-Scalable programming language running on JVM.
+\datedsubsection{\textbf{MLStyle.jl}}{\url{https://thautwarm.github.io/MLStyle.jl/latest/}}
+A Julia package that provides ML language infrastructures like extensible pattern matching, ADTs/GADTs, etc.
 \begin{itemize}
-  \item Supports lambda with and lazy (call by need)/macro (call by name)/strict (call by value).
-  \item About 1/20 of Java's (Hotspot 8u151) performance, provides Java interaction and script engine support.
-  \item Provides CLI REPL with GHCi-style code completion/colored output and JetBrains
-    IDE plugin supporting semantic-based highlights, completion, go-to-definition, rename, eval-and-replace, quick fixes, etc.
+  \item Support a large number of patterns from other languages like Haskell, Elixir, F\#, OCaml, etc.
+  \item Provided a group of concise, intuitive and convenient interfaces to customize pattern matching(extensible pattern matching)
+  \item Allow users to restrict the accessing of patterns via a customizable predicate in module level 
+        , to achieve a clean scoping and avoid conflicts against redefinitions of custom patterns
+  \item Provided a homoiconic way to manipulation ASTs via pattern matching 
+        , which enables users to extract sub-patterns from given ASTs and rewrite them, without a prerequisite
+  about Julia ASTs
 \end{itemize}
 
-\datedsubsection{\textbf{Julia-IntelliJ}}{\url{https://github.com/ice1000/julia-intellij}}
-Julia plugin for JetBrains IDEs, compatible with all JetBrains Products.
+\datedsubsection{\textbf{FSTan}}{\url{https://github.com/thautwarm/FSTan}}
+F\# implementation of Lightweighted Higher Kined Types and type classes
 \begin{itemize}
-  \item Semantic-based highlights, quick fixes, completion, parameter hint, special input mode for Unicode characters.
-  \item Use Markdown plugin to highlight doc strings, provides REPL and SciView (showing the output of Plot libraries).
+ \item Provided a set of commonly-used abstractions like Functor, Monad, MonadTrans, etc., and some commonly-used data types like State/StateT, Either/EitherT, etc.
+ \item Support ad-hoc polymorphisms(via F\#'s STRT), which is an advance comparing to other implementaions
+ \item Support separating data type definitions from interfacing/instancing type classes , which is an advance comparing to other implementaions
 \end{itemize}
 
-% Reference Test
-%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
-%An xxx optimized for xxx\cite{verma2015large}
-%\begin{itemize}
-%  \item main contribution
-%\end{itemize}
+\datedsubsection{\textbf{RSolve}}{\url{https://github.com/thautwarm/RSolve}}
+A general purposed solver for logic programming in Haskell
+\begin{itemize}
+ \item Established an abstraction over unification algorithms, which could be applied to many concrete instances(introduced below)
+ \item Provided some concrete instances like HM unification and option question puzzles
+ \item No dependency but Haskell standard libraries
+\end{itemize}
 
-%% \section{\faHeartO\ Achievements}
-%% \datedline{}{Aug. 2017}
+\datedsubsection{\textbf{LanguageCollections}}{\url{https://github.com/thautwarm/LanguageCollections}}
+List of languages invented by me, which has recorded my experience of learning this topic
+
 
 \section{\faCogs\ Skills}
-\begin{itemize}[parsep=0.25ex]
-  \item \textbf{Programming Languages}:
-    \textbf{multilingual developer} (not limited to any specific language),
-    and especially experienced in Java/Kotlin/Rust/C\#/Agda/Haskell,
-    comfortable with Dart/C++/F\#/F$\star$ (not listed in order)
 
-  % compiler theories
-  \item \textbf{Compilers}:
-    familiar with various Parser Generators/Combinators,
-    understand CPS and ANF, studied some
-    theories about dependent types (like Luo's UTT, Martin-Löf Type Theory)
-    and their implementations in programming languages
-
-  % language Kotlin
-  \item \textbf{Kotlin/Java}:
-    \textbf{2 years} of experience,
-    \textbf{4} projects collected in
-    \href{https://kotlin.link/?q=ice} {Awesome Kotlin},
-    familiar with JNI programming, the Gradle build tool, have experience
-    in using the Kotlin compiler to analyze Java code
-
-  \item \textbf{Formal Verification}:
-    understand dependent types / (co)algebra and Curry-Howard Isomorphism,
-    currently studying Homotopy Type Theory and Cubical Type Theory,
-    familiar with Idris, Agda (\textbf{1 years} of experience,
-    developer team member) and F$\star$
-    \subitem Source code studied: Agda, Idris, miniagda, Mini-TT
-
-  \item \textbf{JetBrains MPS}:
-    \textbf{1 years} of experience,
-    understand concepts and usages of \textbf{Language-Oriented Programming}
-
-  \item \textbf{IDE Toolings}:
-    \textbf{2 years} of experience,
-    familiar with the IntelliJ Platform infrastructure and overall
-    architecture (created the
-    \href{https://plugins.jetbrains.com/plugin/10413-julia}
-         {Julia plugin} and many others), also have experience with Eclipse/SonarQube
-
-  % platforms I am familiar with
-  \item \textbf{Mobile Development}:
-    \textbf{2 years} of experience,
-    Android (Java, Kotlin (Anko)), Fuchsia (Flutter)
-
-  \item \textbf{Developing Tools}:
-    can adapt to any editors/OSs, usually use JetBrains IDEs and Emacs under Ubuntu,
-    have experience with team tools like YouTrack, Jira, GitHub, BitBucket, Coding.net, Tower
+\subsection{\textbf{Compiler - Front End}}
+\begin{itemize}
+  \item Experienced in creating lexer generators, LL(1)/LL(k) Parser Generators and Parser Combinators
+        . Have several implementations in Python available on PyPI, one of which supports
+        processing context sensitive cases and has some demos about implementing parsers
+        for languages that look like Haskell or OCaml.
+  \item Have a knowledge about generating LR(1) parsers from BNF grammars or Parser Combinator notations
 \end{itemize}
 
-% \section{\faHeartO\ Honors and Awards}
-% \datedline{\textit{\nth{1} Prize}, Award on xxx }{Jun. 2013}
-% \datedline{Other awards}{2015}
+\subsection{\textbf{Compiler - Middle End}}
+\begin{itemize}
+  \item Experienced in various kinds of (static) program analyses and transformations
+        , e.g., 
+          implementing custom binary operators with customizable associativities and precedences,
+          partial evaluations, forward reference resolutions, lexical/dynamic scoping analysis, syntactic macros, etc.   
+  \item Familiar with type inferences based on HM unification
+      ,and capable of extending it with
+       with row polymorphisms, instance resolutions, GADTs, etc.
+\end{itemize}
+
+\subsection{\textbf{Compiler - Back End}}
+\begin{itemize}
+  \item Familiar with syntaxes, semantics and some intrinsics of LLVM IR
+  \item Familiar with CPython bytecode instructions and code objects, etc.
+  \item Have some experience about code generation that targets LLVM IR or CPython bytecode
+\end{itemize}
+
+\subsection{\textbf{Compiler - Others}}
+\begin{itemize}
+  \item Experienced in making DSLs
+  \item Familiar with low level data layouts
+  \item Familiar with implementing high level language constructs
+        (Module, Pattern Matching, Switch, Closure, etc.) for both
+        compiled languages and interpreted languages.
+\end{itemize}
+
+\subsection{\textbf{Functional Programming}}
+\begin{itemize}
+  \item Familiar with type classes and higher kinded types
+        , and have created several implementaions
+  \item Understand and can make good use of CPS, Y-Combinators, simple untyped/typed lambda calculus
+  \item Understand Monad related stuffs from Monoid to MonadTrans
+        , and have a preference of monadic coding style
+\end{itemize}
+
+\subsection{\textbf{Machine Learning}}
+\begin{itemize}
+  \item Used to be familiar with commonly-used DL frameworks like PyTorch and Tensorflow, and capable of picking up again in a few minutes.
+  \item Have a lot of experience about using traditional ML toolchains like NumPy, Scikit-Learn, Pandas, Matplotlib, etc.
+  \item Understand forward propogation and back propogation, capable of creating simple neural network frameworks
+  \item Understand many traditional ML algorithms like KNN, K-Means, Decision Tree, Random Forest, Stacking, etc.
+  \item 2016 CCF/DataFountain Agricultural Product Price Prediction rank 7/500+
+  \item Have some knowledge about bioinformatics and NLP
+        , familiar with feature extraction methods(PSSM, N-Gram, TF-IDF, etc.)
+  \item Capable of taking advantage of ML in daily life
+        , such as playing FGO and creating smart CLI(like lightweighted auto-jump)
+\end{itemize}
 
 \section{\faInfo\ Miscellaneous}
 \begin{itemize}[parsep=0.25ex]
-  \item Blog: \url{https://ice1000.org/} partially translated into English
-  \item Literate Agda Blog: \url{https://ice1000.org/lagda/} used Literate mode of Agda improved by me
-  \item Bintray: \url{https://bintray.com/ice1000} published some useful JVM libraries
-  \item IntelliJ Plugin developer: \url{https://plugins.jetbrains.com/author/10a216dd-c558-4aaf-aa8a-723f431452fb}
-  \item Books about formal verification I've written: \url{https://github.com/ice1000/Books}
-  \item Languages: English - fluent (TOEFL 100), Chinese - native speaker
-  \item Opensource contributions: \url{https://ice1000.org/opensource-contributions/} \\
-    pull-requested (functional improvements) to organizations like \textit{Microsoft, JetBrains, Ruby, Dropbox, PingCAP, TiKV},
-    projects like \textit{agda, imgui, shields.io, intellij-solidity, IntelliJ-EmmyLua, intellij-haskell}
-  \item StackOverflow: \url{https://stackoverflow.com/users/7083401/}
-    3000+ reputations, also active on \href{https://stackexchange.com/users/9532102/} {other StackExchange} sites
-  % https://raw.githubusercontent.com/ice1000/resume/master/resume.pdf
-  \item Get the newest version of this resume: \url{https://tinyurl.com/y8xdlfug}
-  \item \textbf{1 kyu} on
-    \href{https://www.codewars.com/users/ice1000} {CodeWars},
-    ranked \#37 on the whole site, primarily in Haskell
-  \item Love making friends
+  \item Blog: \url{https://thautwarm.github.io/Site-32/}
+  \item A more illustrated 
+  \item PyPI: \url{https://pypi.org/user/thautwarm/}
+  \item PyConChina 2018: \url{http://cn.pycon.org/2018/city_beijing.html}, as a lecturer(called \textit{NightyNight}) 
+  \item Open source contributions: contributed to some organizations such as \textit{Microsoft, Python} \\
+        Fetch the meaningful records from \url{https://thautwarm.github.io/Site-32/Others/contributions.html}
+  \item Codewars: \url{https://www.codewars.com/users/NightyNight/}, basically merely prefer to finish the most difficult trainings
 \end{itemize}
 
 %% Reference
