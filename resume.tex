@@ -19,8 +19,11 @@
 }
 
 \section{\faGraduationCap\ Education}
-\datedsubsection{\textbf{Nanjing University of Science and Technology}, Jiangsu, China}{09/15 -- Current}
+\datedsubsection{\textbf{Nanjing University of Science and Technology}, Jiangsu, China}{09/15 -- 06/19}
   Major: Mathematics and Applied Mathematics
+
+\datedsubsection{\textbf{Nanjing University of Science and Technology}, Jiangsu, China}{12/19 -- Current}
+  Major: Computer Science
 
 \section{\faUsers\ Work Experience}
 \datedsubsection{\textbf{Microsoft Research Asia}, Beijing, China}{11/17 -- 02/19}
@@ -34,24 +37,27 @@
 
 \section{\faGithubAlt\ Personal Projects}
 
+\datedsubsection{\textbf{Restrain-JIT}}{\url{https://github.com/thautwarm/restrain-jit}}
+A Just-In-Time compilation for CPython
+
+\datedsubsection{\textbf{moshmosh}}{\url{https://github.com/thautwarm/moshmosh}}
+A syntax extension library for CPython, bundled with the fastest implementation of pattern matching for CPython.
+
 \datedsubsection{\textbf{YAPyPy}}{\url{https://github.com/Xython/YAPyPy}}
 Yet Another Python Python / Pure Python Compiler
 \begin{itemize}
-  \item A pure Python compiler built on CPython, which provides full compatibility for multiple versions of CPython 3.x
-      , currently support 3.6.x and 3.7.x
+  \item A pure Python compiler built on CPython providing compatibility for multiple versions of CPython 3.x
   \item Provided some syntax extensions like dictionary destructuring and pattern matching
   \item Capable of customizing parser and bytecode emitter
-      , which enables making arbitrary syntactic/semantic extensions with CPython its own
 \end{itemize}
 
 \datedsubsection{\textbf{MLStyle.jl}}{\url{https://thautwarm.github.io/MLStyle.jl/latest/}}
 A Julia package that provides ML language infrastructures like extensible pattern matching, ADTs/GADTs, etc.
 \begin{itemize}
   \item Support a large number of patterns from other languages like Haskell, Elixir, F\#, OCaml, etc.
-  \item Provided a group of concise, intuitive and convenient interfaces to customize pattern matching(extensible pattern matching)
-  \item Allow users to restrict the accessing of patterns via a customizable predicate in module level 
-        , to achieve a clean scoping and avoid conflicts against redefinitions of custom patterns
-  \item Provided a homoiconic way to manipulation ASTs via pattern matching 
+  \item Provided a group of concise, intuitive and convenient interfaces to customize pattern matching
+  \item Allow users to restrict the accessing of patterns in module level
+  \item Provided a homoiconic way to manipulation ASTs via pattern matching
         , which enables users to extract sub-patterns from given ASTs and rewrite them, without a prerequisite
   about Julia ASTs
 \end{itemize}
@@ -59,41 +65,44 @@ A Julia package that provides ML language infrastructures like extensible patter
 \datedsubsection{\textbf{FSTan}}{\url{https://github.com/thautwarm/FSTan}}
 F\# implementation of Lightweighted Higher Kined Types and type classes
 \begin{itemize}
- \item Provided a set of commonly-used abstractions like Functor, Monad, MonadTrans, etc., and some commonly-used data types like State/StateT, Either/EitherT, etc.
+ \item Provided a set of commonly-used type classes like Functor, Monad, MonadTrans and some instances for them
  \item Support ad-hoc polymorphisms(via F\#'s STRT), which is an advance comparing to other implementaions
- \item Support separating data type definitions from interfacing/instancing type classes , which is an advance comparing to other implementaions
 \end{itemize}
 
-\datedsubsection{\textbf{RSolve}}{\url{https://github.com/thautwarm/RSolve}}
-A general purposed solver for logic programming in Haskell
+\datedsubsection{\textbf{RSolve}}{\url{https://github.com/thautwarm/RSolve}, \url{https://github.com/thautwarm/rsolve.py}}
+A general purposed solver for logic programming in Haskell/Python
 \begin{itemize}
  \item Established an abstraction over unification algorithms, which could be applied to many concrete instances(introduced below)
  \item Provided some concrete instances like HM unification and option question puzzles
- \item No dependency but Haskell standard libraries
+ \item No dependency but Haskell/Python standard libraries
 \end{itemize}
 
 \datedsubsection{\textbf{LanguageCollections}}{\url{https://github.com/thautwarm/LanguageCollections}}
 List of languages invented by me, which has recorded my experience of learning this topic
 
+\datedsubsection{\textbf{CanonicalTraits.jl}}{\url{https://github.com/thautwarm/CanonicalTraits.jl}}
+A real implementaion of Haskell's type classes in Julia
+
+\datedsubsection{\textbf{GeneralizedGenerated.jl}}{\url{https://github.com/thautwarm/GeneralizedGenerated.jl}}
+A great enhancement for julia staged programming, which is widely used by the Julia community
 
 \section{\faCogs\ Skills}
 
 \subsection{\textbf{Compiler - Front End}}
 \begin{itemize}
-  \item Capable of creating LL(1) Parser Generator, understand LL(k),  
-        experienced in creating lexer generators and Parser Combinators
-        . Have several implementations in Python and F\#, one of which supports
-        processing context sensitive cases and has some demos about implementing parsers
-        for languages that look like Haskell or OCaml.
-  \item Have a knowledge about generating LR(1) parsers from BNF grammars or Parser Combinator notations
+  \item experienced in creating LL(k) parsers, understand several advanced extensions and have an implementaion
+        in Haskell: \url{https://github.com/thautwarm/RBNF.hs}
+  \item experienced in creating lexer generators and Parser Combinators
+        . Have several implementations in Python, F\# and Haskell.
+  \item Understand LR(1) and several of its advanced derivatives like GLR.
 \end{itemize}
 
 \subsection{\textbf{Compiler - Middle End}}
 \begin{itemize}
   \item Experienced in various kinds of (static) program analyses and transformations
-        , e.g., 
+        , e.g.,
           implementing custom binary operators with customizable associativities and precedences,
-          partial evaluations, forward reference resolutions, lexical/dynamic scoping analysis, syntactic macros, etc.   
+          partial evaluations, forward reference resolutions, lexical/dynamic scoping analysis, syntactic macros, etc.
   \item Familiar with type inferences based on HM unification
       ,and capable of extending it with
        with row polymorphisms, instance resolutions, GADTs, etc.
@@ -102,8 +111,9 @@ List of languages invented by me, which has recorded my experience of learning t
 \subsection{\textbf{Compiler - Back End}}
 \begin{itemize}
   \item Familiar with syntaxes, semantics and some intrinsics of LLVM IR
+  \item Familiar with MIPS instructions
   \item Familiar with CPython bytecode instructions and code objects, etc.
-  \item Have some experience about code generation that targets LLVM IR or CPython bytecode
+  \item Have some experience about code generation targeting LLVM IR, CPython bytecode or MIPS ASM
 \end{itemize}
 
 \subsection{\textbf{Compiler - Others}}
@@ -141,10 +151,12 @@ List of languages invented by me, which has recorded my experience of learning t
 \begin{itemize}[parsep=0.25ex]
   \item Blog: \url{https://thautwarm.github.io/Site-32/}
   \item PyPI: \url{https://pypi.org/user/thautwarm/}
-  \item PyConChina 2018: \url{http://cn.pycon.org/2018/city_beijing.html}, as a lecturer(called \textit{NightyNight}) 
+  \item JuliaCN Meetup 2019: \url{https://github.com/JuliaCN/MeetUpMaterials/tree/master/Beijing2019/thautwarm}
+  \item PyConChina 2018: \url{http://cn.pycon.org/2018/city_beijing.html}, as a lecturer(called \textit{NightyNight})
+  \item PyConChina 2019: \url{http://cn.pycon.org/2019/index.html}, as a lecturer(called \textit{thautwarm})
   \item Open source contributions: contributed to some organizations such as \textit{Microsoft, Python} \\
         Fetch the meaningful records from \url{https://thautwarm.github.io/Site-32/Others/contributions.html}
-  \item Codewars: \url{https://www.codewars.com/users/NightyNight/}, basically merely prefer to finish the most difficult trainings
+  \item Fetch the newest resume: \url{https://raw.githubusercontent.com/thautwarm/resume/master/resume.pdf}
 \end{itemize}
 
 %% Reference
